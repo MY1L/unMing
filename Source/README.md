@@ -1,6 +1,7 @@
 # 不明字迹.png
 这里是做字体参考用的原图。
-![Screenshots](/feature/スタッフロール縦/不明.png)
+
+![不明](/Source/feature/スタッフロール縦/不明.png)
 
 ## feature
 用于OpenType字体特性参考，所有图都不止1字以参考字间距`kern`。譬如「スタッフロール縦」「使用楽曲」是用于还原纵排字间距`vkrn`的，「RUjimaku」用于作空心字符替换：标题用字`titl`／符号形式`nalt`，等等。
