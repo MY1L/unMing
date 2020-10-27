@@ -1,0 +1,11 @@
+﻿script DFLT {
+  feature nalt;
+}
+
+feature nalt nalt {
+  lookup nalt;
+}
+
+lookup nalt {
+  sub u660E -> u660E.logo;
+}
