@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1700px" height="1300px" viewBox="0 0 1700 1300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <defs>
+    <rect width="1700" height="1300" id="artboard_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="glyph" clip-path="url(#clip_1)">
+    <use xlink:href="#artboard_1" stroke="none" fill="#FFFFFF" fill-opacity="0" />
+    <path d="M25 0L50 50L0 50L25 0Z" transform="translate(825 1300)" id="下限" fill="#FF0088" fill-opacity="0.2" stroke="none" />
+    <path d="M25 0L50 50L0 50L25 0Z" transform="matrix(1 0 0 -1 825 0)" id="上限" fill="#FF0088" fill-opacity="0.2" stroke="none" />
+    <path d="M422 818C467 818 490 778 490 699C490 640 489 605 488 592C479 527 454 375 413 136C413 57.0001 388 17 337 17C318 17 242 21 107 30C91 10 81 4.57764e-05 77 0C62 0 54 20.0001 51 59C51 62.0001 53 66.0001 56 71.0001C59 77 61 90.0001 64 111C64 431 43 635 0 724C5 734 15 745 30 758C72 758 103 664 124 477C166 482 190 484 196 484C208 484 223 483 241 480C260 478 284 477 315 477C360 470 383 456 383 435C383 431 382 427 380 424C377 421 371 418 362 415C352 412 336 409 315 405C240 405 181 413 136 430C131 430 129 427 128 422L132 400L132 315C134 304 135 296 135 292C135 289 135 286 134 285C133 284 132 278 132 268C132 213 128 158 119 102C192 93.0001 265 89.0001 337 89.0001C337 108 344 169 358 273C298 258 255 251 230 251C195 257 170 267 153 281C153 298 157 310 166 315C257 323 309 330 320 336C332 342 340 345 345 345C345 341 354 335 371 328C392 427 406 502 411 553C416 605 418 661 418 720C418 734 415 741 409 741C362 704 337 686 332 686C316 686 306 693 303 707C318 747 336 775 355 792C374 809 397 818 422 818L422 818Z" transform="translate(590 265.9999)" id="⺝" fill="#000000" stroke="none" />
+  </g>
+</svg>

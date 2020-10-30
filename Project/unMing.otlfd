@@ -1,24 +1,20 @@
 ﻿script DFLT {
-  feature Nalt;
-  feature SS01;
-  feature Calt;
-  feature Mk2B;
-  feature SS02;
-  feature Vert;
   feature Ccmp;
   feature Kern;
+  feature Calt;
+  feature Nalt;
+  feature Vert;
+  feature Mk2B;
+  feature SS01;
+  feature SS02;
   feature SS03;
-  feature Rand;
   feature Sups;
+  feature Rand;
 }
 
 class @_o [0.ss01 a];
 class @_V [V W];
-
-feature Calt calt {
-  lookup calt;
-  lookup liga;
-}
+class @M2B_Hrkt [u307B_ho_hira u30AF_ku_kana];
 
 feature Ccmp ccmp {
   lookup ccmp;
@@ -28,16 +24,21 @@ feature Kern kern {
   lookup kern;
 }
 
-feature Mk2B mark {
-  lookup mark2base;
+feature Calt calt {
+  lookup liga;
+  lookup calt;
 }
 
 feature Nalt nalt {
   lookup nalt;
 }
 
-feature Rand rand {
-  lookup rand;
+feature Vert vert {
+  lookup vert;
+}
+
+feature Mk2B mark {
+  lookup mark2base;
 }
 
 feature SS01 ss01 {
@@ -59,8 +60,8 @@ feature Sups sups {
   lookup sups;
 }
 
-feature Vert vert {
-  lookup vert;
+feature Rand rand {
+  lookup rand;
 }
 
 params FeatureParams_ss01 ssetparams {
@@ -75,135 +76,132 @@ params FeatureParams_ss03 ssetparams {
   name 2052 "变体三：小型"; # Chinese - People's Republic of China
 }
 
-lookup nalt {
-  subtable logo {
-    sub u660E -> u660E.logo;
-    sub u767E -> u767E.nico;
+lookup myil {
+  subtable d2em {
+    sub dash.em3 -> dash.em3+;
   }
 }
 
-lookup ss01 {
-  subtable Subtable1 {
-    sub 0 -> 0.ss01;
-    sub B -> "uFF22-i-B";
-    sub "uFF22-i-B" -> uFF22.ss01;
-    sub a -> a.ss01;
-    sub "u306E-no-kana" -> u306E.ss01;
-    sub "u30A4-i-kana" -> u2E85+u30A4.ss01;
-    sub "u30AD-ki-kana" -> u30AD.ss01;
-    sub "u30AF-ku-kana" -> u30AF.ss01;
-    sub "u30B7-si-kana" -> u30B7.ss01;
-    sub "u30BF-ta-kana" -> u2F23+u30BF.ss01;
-    sub "u30C3-s-tu-kana" -> u30C3.ss01;
-    sub "u30D0-ba-kana" -> u30D0.ss01;
-    sub "u30F3-n-kana" -> u30F3.ss01;
-    sub "u30FC-longsound" -> "hyph-mins+u30FC.ss01";
-    sub u30FC.vert -> u30FC.vert.ss01;
-    sub u7DE8 -> u7DE8.ss01+u7F16;
-    sub u96C6 -> u96C6.ss01;
-  }
-}
-
-lookup calt {
-  subtable em {
-    context 3emdash (emdash);
-    sub 0 myil;
-    context 3emdash (2emdash);
-    sub 0 ccmp;
-  }
-  subtable char {
-    context (F) a;
-    sub 0 ss01;
-    context ("u307C-bo-kana") "u306E-no-kana";
-    sub 0 ss01;
-  }
-}
-
-lookup mark2base {
-  subtable kana {
-    anchor kana;
-    mark "u3099-vm-comb" 0 0;
-    pos "u307B-ho-kana" mark 973 -355;
-    pos "u30AF-ku-kana" mark 664 36;
-    anchor kana;
-    mark "u309A-si-vm-comb" 0 0;
-    pos "u307B-ho-kana" mark 973 -355;
-    pos "u30AF-ku-kana" mark 664 36;
-  }
-}
-
-lookup vert {
-  subtable kana {
-    sub "u30C3-s-tu-kana" -> u30C3.vert;
-    sub "u30E3-s-ya-kana" -> u30E3.vert;
-    sub "u30FC-longsound" -> u30FC.vert;
+lookup liga {
+  subtable myil {
+    sub M Y 1 L -> ".notdef";
+    sub M Y I L -> ".notdef";
+    sub u660E u20E0_circ.backslsh_comb -> u660E.logo;
   }
 }
 
 lookup ccmp {
   subtable 2em {
-    sub emdash emdash emdash -> 3emdash;
-    sub emdash emdash -> 2emdash;
-    sub 3emdash+ -> 3emdash;
-  }
-}
-
-lookup myil {
-  subtable d2em {
-    sub 3emdash -> 3emdash+;
+    sub dash.em dash.em dash.em -> dash.em3;
+    sub dash.em dash.em -> dash.em2;
+    sub dash.em3+ -> dash.em3;
   }
 }
 
 lookup kern {
-  subtable latn {
+  subtable Latn {
     pos V @_o <-100> <0>;
     pos V M <-100> <0>;
     pos W @_o <-60> <0>;
     pos a @_V <-120> <0>;
   }
-  subtable kana {
-    pos "u30A2-a-kana" "u30CB-ni-kana+u4E8C" <-120> <0>;
+  subtable Hrkt {
+    pos u30A2_a_kana u30CB_ni_kana+u4E8C <-120> <0>;
   }
 }
 
-lookup liga {
-  subtable my {
-    sub M Y 1 L -> ".notdef";
-    sub M Y I L -> ".notdef";
+lookup mark2base {
+  anchor Hrkt;
+  mark u3099_vm_comb 0 0;
+  pos u307B_ho_hira mark 973 -355;
+  pos u30AF_ku_kana mark 664 36;
+  anchor Hrkt;
+  mark u309A_si_vm_comb 0 0;
+  pos u307B_ho_hira mark 973 -355;
+  pos u30AF_ku_kana mark 664 36;
+}
+
+lookup calt {
+  subtable em {
+    context dash.em3 (dash.em);
+    sub 0 myil;
+    context dash.em3 (dash.em2);
+    sub 0 ccmp;
+  }
+  subtable char {
+    context (F) a;
+    sub 0 ss01;
+    context (u307C_bo_hira) u306E_no_hira;
+    sub 0 ss01;
   }
 }
 
-lookup ss03 {
-  sub "u306E-no-kana" -> u306E.ss03;
+lookup nalt {
+  subtable Logo {
+    sub u660E -> u660E.logo;
+    sub u767E -> u767E.nico;
+  }
+}
+
+lookup vert {
+  subtable Hrkt {
+    sub u30C3_s_tu_kana -> u30C3.vert;
+    sub u30E3_s_ya_kana -> u30E3.vert;
+    sub u30FC_longsound -> u30FC.vert;
+  }
+}
+
+lookup ss01 {
+  sub 0 -> 0.ss01;
+  sub B -> uFF22_i_B;
+  sub uFF22_i_B -> uFF22.ss01;
+  sub a -> a.ss01;
+  sub u306E_no_hira -> u306E.ss01;
+  sub u30A4_i_kana -> u2E85+u30A4.ss01;
+  sub u30AD_ki_kana -> u30AD.ss01;
+  sub u30AF_ku_kana -> u30AF.ss01;
+  sub u30B7_si_kana -> u30B7.ss01;
+  sub u30BF_ta_kana -> u2F23+u30BF.ss01;
+  sub u30C3_s_tu_kana -> u30C3.ss01;
+  sub u30D0_ba_kana -> u30D0.ss01;
+  sub u30F3_n_kana -> u30F3.ss01;
+  sub u30FC_longsound -> dash.mins+u30FC.ss01;
+  sub u30FC.vert -> u30FC.vert.ss01;
+  sub u7DE8 -> u7DE8.ss01+u7F16;
+  sub u96C6 -> u96C6.ss01;
 }
 
 lookup ss02 {
-  sub "u306E-no-kana" -> u306E.ss02;
-  sub "u30C3-s-tu-kana" -> u30C3.ss02;
+  sub u306E_no_hira -> u306E.ss02;
+  sub u30C3_s_tu_kana -> u30C3.ss02;
+}
+
+lookup ss03 {
+  sub u306E_no_hira -> u306E.ss03;
+}
+
+lookup sups {
+  sub 0 -> 0.sups+u00BA_ordm;
+  sub 1 -> 1.sups;
+  sub a -> a.sups+u00AA_ordf;
+  sub o -> 0.sups+u00BA_ordm;
 }
 
 lookup rand {
   sub 0 -> [0.ss01];
-  sub B -> ["uFF22-i-B"];
+  sub B -> [uFF22_i_B];
   sub a -> [a.ss01];
-  sub "u306E-no-kana" -> [u306E.ss01 u306E.ss02 u306E.ss03];
-  sub "u30A4-i-kana" -> [u2E85+u30A4.ss01];
-  sub "u30AD-ki-kana" -> [u30AD.ss01];
-  sub "u30AF-ku-kana" -> [u30AF.ss01];
-  sub "u30B7-si-kana" -> [u30B7.ss01];
-  sub "u30BF-ta-kana" -> [u2F23+u30BF.ss01];
-  sub "u30C3-s-tu-kana" -> [u30C3.ss01 u30C3.ss02];
-  sub "u30D0-ba-kana" -> [u30D0.ss01];
-  sub "u30F3-n-kana" -> [u30F3.ss01];
-  sub "u30FC-longsound" -> ["hyph-mins+u30FC.ss01"];
+  sub u306E_no_hira -> [u306E.ss01 u306E.ss02 u306E.ss03];
+  sub u30A4_i_kana -> [u2E85+u30A4.ss01];
+  sub u30AD_ki_kana -> [u30AD.ss01];
+  sub u30AF_ku_kana -> [u30AF.ss01];
+  sub u30B7_si_kana -> [u30B7.ss01];
+  sub u30BF_ta_kana -> [u2F23+u30BF.ss01];
+  sub u30C3_s_tu_kana -> [u30C3.ss01 u30C3.ss02];
+  sub u30D0_ba_kana -> [u30D0.ss01];
+  sub u30F3_n_kana -> [u30F3.ss01];
+  sub u30FC_longsound -> [dash.mins+u30FC.ss01];
   sub u7DE8 -> [u7DE8.ss01+u7F16];
   sub u96C6 -> [u96C6.ss01];
-  sub "uFF22-i-B" -> [uFF22.ss01];
-}
-
-lookup sups {
-  sub 0 -> "0.sups+u00BA-ordm";
-  sub 1 -> 1.sups;
-  sub a -> "a.sups+u00AA-ordf";
-  sub o -> "0.sups+u00BA-ordm";
+  sub uFF22_i_B -> [uFF22.ss01];
 }

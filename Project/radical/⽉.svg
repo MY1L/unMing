@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1700px" height="1300px" viewBox="0 0 1700 1300" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <defs>
+    <rect width="1700" height="1300" id="artboard_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#artboard_1" clip-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="glyph" clip-path="url(#clip_1)">
+    <use xlink:href="#artboard_1" stroke="none" fill="#FFFFFF" fill-opacity="0" />
+    <path d="M25 0L50 50L0 50L25 0Z" transform="translate(825 1300)" id="下限" fill="#FF0088" fill-opacity="0.2" stroke="none" />
+    <path d="M25 0L50 50L0 50L25 0Z" transform="matrix(1 0 0 -1 825 0)" id="上限" fill="#FF0088" fill-opacity="0.2" stroke="none" />
+    <path d="M525 1000C547 1000 564 962 564 884C564 868 561 799 554 677C547 556 531 365 486 105C486 95.0001 489 84 497 72.0001C497 34 471 12 419 6C335 17.0001 250 34 205 56L189 56C179 24 168 5 156 0C143 0 130 6 117 17.0001C117 32 119 53 122 78C111 85 106 93 106 100L106 128C106 135 110 139 117 139C135 139 145 179 145 260C145 465 135 642 69 805C41 868 0 925 0 940C0 958 9 967 28 967C73 967 138 898 176 757C208 639 205 507 222 365C228 376 236 382 248 382C335 378 373 376 441 376C464 398 472 564 487 873C486 881 482 884 476 884C448 829 426 802 409 802C387 802 376 816 376 846C417 949 457 1000 525 1000L525 1000Z" transform="translate(551 166.9999)" id="⽉" fill="#000000" stroke="none" />
+    <path d="M28 78C149 78 224 61 224 28C224 9 217 0 202 0C78 6 0 19 0 39L0 55C0 70 10 78 28 78L28 78Z" transform="translate(778 755)" id="⽉-[2]" fill="#000000" stroke="none" />
+    <path d="M11 260C11 189 7 117 0 44.0001C103 18.0001 144 4.00006 203 0C211 2 216 5 219 11C216 25 215 40.0001 214 55.0001C214 67.0001 219 117 230 204C230 212 226 215 219 215L186 215C83 227 11 242 11 260L11 260Z" transform="translate(762 249.9999)" id="⽉-[1]" fill="#FFFFFF" stroke="none" />
+  </g>
+</svg>
