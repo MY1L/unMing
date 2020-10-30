@@ -33,18 +33,19 @@
 演示用OT特性脚本。纯文本，感兴趣可以直接在这网页打开看看。
 
 ## feature
+有特效的字形.svg
 ### 字形命名
 命名规则：用`.`标注字形涉及的OT特性标签。由于文件名不能用冒号，以键盘`_`号表示后方为注释。典型的有：
 
-- _radi：radical，部首补充
-- _kgxi：kangxi，康熙部首
-- _strk：stroke，笔画
-- _kana：katakana（カタカナ）片仮名，_hira：hiragana（ひらがな）平仮名，_s_：小型假名；此处缩写遵循[ISO 15924](https://www.unicode.org/iso15924/iso15924-codes.html)
-- _comb：附在其它符号上的符号，比如゚U+309A katakana.hiragana.semi-voiced.sound.mark.combining，略作u309A_si_vm_comb
-- _L：left，大写，左
-- _R：right，大写，右
-- _w_：white，空心（统一码别致的命名法，同理_b_(black)是实心）
-- _i_：ideographic，东亚符号，兼作fullwidth全角符号，因为本字体不等宽无所谓全角了，只会是空隙宽些。
+- `_radi`：radical，部首补充
+- `_kgxi`：kangxi，康熙部首
+- `_strk`：stroke，笔画
+- `_kana`：katakana（カタカナ）片仮名，`_hira`：hiragana（ひらがな）平仮名，`_s_`：小型假名；此处缩写遵循[ISO 15924](https://www.unicode.org/iso15924/iso15924-codes.html)
+- `_comb`：附在其它符号上的符号，比如゚U+309A katakana.hiragana.semi-voiced.sound.mark.combining，略作u309A_si_vm_comb
+- `_L`：left，大写，左
+- `_R`：right，大写，右
+- `_w_`：white，空心（统一码别致的命名法，同理`_b_`(black)是实心）
+- `_i_`：ideographic，东亚符号，兼作fullwidth全角符号，因为本字体不等宽无所谓全角了，只会是空隙宽些。
 
 `+`号表示该图形被用于多个符号，命名将多个符号列举出。
 ### 特性标签
